@@ -1,0 +1,14 @@
+<% if @directors.present? %>
+	<% @directors.each do |director| %>
+		<%= director.name %>
+		<ul>
+			<% director.movies.each do |movie| %>
+				<li>
+					<%= movie.title %>
+				</li>
+			<% end %>
+		</ul>
+	<% end %>
+<%else%>
+	<p>Nao tem nada</p>
+<% end %>
